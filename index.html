@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESP32 · LED Control Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <header class="dash-header">
+      <div class="eyebrow"><span class="dot"></span>ESP32 · 3-Channel LED Dashboard</div>
+      <h1>LED Control <span>Panel</span></h1>
+
+      <details class="connection-card">
+        <summary>Connection settings</summary>
+        <div class="conn-row">
+          <input id="espIp" type="text" placeholder="192.168.4.1" value="192.168.4.1" />
+          <button id="saveIp">Save</button>
+        </div>
+        <div class="conn-status" id="connStatus">Not connected yet.</div>
+      </details>
+    </header>
+
+    <div class="led-grid">
+
+      <!-- RED LED -->
+      <section class="panel" data-color="red" data-pin="18">
+        <div class="panel-eyebrow">ESP32 · GPIO 18</div>
+        <h2>Red LED</h2>
+
+        <div class="bulb-stage">
+          <div class="bulb-wrap">
+            <div class="bulb-glow"></div>
+            <div class="bulb"></div>
+          </div>
+        </div>
+
+        <div class="status-line">LED is <b class="state-label">OFF</b></div>
+
+        <div class="controls">
+          <button class="toggle btn-on">Turn On</button>
+          <button class="toggle btn-off">Turn Off</button>
+        </div>
+      </section>
+
+      <!-- GREEN LED -->
+      <section class="panel" data-color="green" data-pin="19">
+        <div class="panel-eyebrow">ESP32 · GPIO 19</div>
+        <h2>Green LED</h2>
+
+        <div class="bulb-stage">
+          <div class="bulb-wrap">
+            <div class="bulb-glow"></div>
+            <div class="bulb"></div>
+          </div>
+        </div>
+
+        <div class="status-line">LED is <b class="state-label">OFF</b></div>
+
+        <div class="controls">
+          <button class="toggle btn-on">Turn On</button>
+          <button class="toggle btn-off">Turn Off</button>
+        </div>
+      </section>
+
+      <!-- YELLOW LED -->
+      <section class="panel" data-color="yellow" data-pin="21">
+        <div class="panel-eyebrow">ESP32 · GPIO 21</div>
+        <h2>Yellow LED</h2>
+
+        <div class="bulb-stage">
+          <div class="bulb-wrap">
+            <div class="bulb-glow"></div>
+            <div class="bulb"></div>
+          </div>
+        </div>
+
+        <div class="status-line">LED is <b class="state-label">OFF</b></div>
+
+        <div class="controls">
+          <button class="toggle btn-on">Turn On</button>
+          <button class="toggle btn-off">Turn Off</button>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
